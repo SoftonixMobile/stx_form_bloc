@@ -32,8 +32,8 @@ class FieldBlocValidatorsErrors {
 class FieldBlocValidators {
   FieldBlocValidators._();
 
-  static Validator<dynamic> requiredValidator = required;
-  static Validator<bool?> requiredBooleanValidator = booleanRequired;
+  static Validator<dynamic> requiredValidator = defaultRequired;
+  static Validator<bool?> requiredBooleanValidator = defaultBooleanRequired;
 
   static Set<Validator<T>> getValidators<T>(
       Set<Validator<T>>? validators, bool? required) {
@@ -57,7 +57,7 @@ class FieldBlocValidators {
   ///
   /// Returns [FieldBlocValidatorsErrors.required]
   /// if is not valid.
-  static String? required(dynamic value) {
+  static String? defaultRequired(dynamic value) {
     if (value == null ||
         ((value is Iterable || value is String || value is Map) &&
             value.length == 0)) {
@@ -67,7 +67,7 @@ class FieldBlocValidators {
     return null;
   }
 
-  static String? booleanRequired(bool? value) {
+  static String? defaultBooleanRequired(bool? value) {
     if (value == true) {
       return null;
     }

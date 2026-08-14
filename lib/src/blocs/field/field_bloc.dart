@@ -236,12 +236,12 @@ abstract class SingleFieldBloc<Value, State extends FieldBlocState<Value>>
 
     if (required) {
       addValidator(
-        FieldBlocValidators.required,
+        FieldBlocValidators.defaultRequired,
         forceValidation: forceValidation,
       );
     } else {
       removeValidator(
-        FieldBlocValidators.required,
+        FieldBlocValidators.defaultRequired,
         forceValidation: forceValidation,
       );
     }
