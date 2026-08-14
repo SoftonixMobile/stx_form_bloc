@@ -1,3 +1,8 @@
+## 4.0.2
+- Fix "isRequired" to check the overridable "requiredValidator" and "requiredBooleanValidator" instead of the default implementations
+- Fix "changeRequirement" to add and remove the overridable "requiredValidator" and "requiredBooleanValidator" instead of the default implementations
+- Rename "required" and "booleanRequired" validators to "defaultRequired" and "defaultBooleanRequired"
+
 ## 4.0.1
 - Added "data" getter to FieldBloc
 - Fix MultiFieldBloc validation
