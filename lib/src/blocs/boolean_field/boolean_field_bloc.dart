@@ -50,12 +50,12 @@ class BooleanFieldBloc extends SingleFieldBloc<bool?, BooleanFieldBlocState> {
 
     if (required) {
       addValidator(
-        FieldBlocValidators.booleanRequired,
+        FieldBlocValidators.defaultBooleanRequired,
         forceValidation: forceValidation,
       );
     } else {
       removeValidator(
-        FieldBlocValidators.booleanRequired,
+        FieldBlocValidators.defaultBooleanRequired,
         forceValidation: forceValidation,
       );
     }

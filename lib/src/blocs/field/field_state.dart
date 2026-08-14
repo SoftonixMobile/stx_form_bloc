@@ -77,8 +77,8 @@ abstract class FieldBlocState<Value> extends Equatable with FieldBlocStateBase {
   bool get disabled => !enabled;
 
   bool get isRequired =>
-      validators.contains(FieldBlocValidators.required) ||
-      validators.contains(FieldBlocValidators.booleanRequired);
+      validators.contains(FieldBlocValidators.requiredValidator) ||
+      validators.contains(FieldBlocValidators.requiredBooleanValidator);
 
   String? get displayError => isDirty ? error : null;
 
