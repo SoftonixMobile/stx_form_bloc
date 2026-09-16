@@ -1,3 +1,6 @@
+## 4.1.0
+- Update dependencies (bloc 9.2.1, equatable 3.0.0, uuid 4.6.0, darq 2.1.0, lints 6.1.0)
+
 ## 4.0.2
 - Fix "isRequired" to check the overridable "requiredValidator" and "requiredBooleanValidator" instead of the default implementations
 - Fix "changeRequirement" to add and remove the overridable "requiredValidator" and "requiredBooleanValidator" instead of the default implementations
